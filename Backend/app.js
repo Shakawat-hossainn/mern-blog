@@ -7,7 +7,7 @@ import authRoutes from "./routes/auth.route.js";
 import cookieParser from 'cookie-parser'
 import postRoutes from './routes/post.route.js'
 import commentRoutes from './routes/comment.route.js'
-import path from 'path'
+
 
 const app = express();
 app.use(express.json())
@@ -26,13 +26,7 @@ app.use((err,req,res,next)=>{
        message
     })
 })
-app.use(express.static(path.join(__dirname,'/Frontend/dist')))
-app.get('*',(req,res)=>{
-    res.sendFile(path.join(__dirname,'/Frontend/dist/index.html'))
-    app.get('/', (req, res) => {
-        res.send('Hello, Vercel!');
-      });
-})
+
 const PORT = process.env.PORT || 2000;
 
 const start = async ()=>{
