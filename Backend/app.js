@@ -16,7 +16,7 @@ app.use('/api/v1/user',userRoutes)
 app.use('/api/v1/auth',authRoutes)
 app.use('/api/v1/post',postRoutes)
 app.use('/api/v1/comment',commentRoutes)
-const __dirname = path.resolve()
+//const __dirname = path.resolve()
 app.use((err,req,res,next)=>{
     const statusCode = err.statusCode || 500
     const  message = err.message || "Internal Server Error"
