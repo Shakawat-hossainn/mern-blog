@@ -7,7 +7,7 @@ export default defineConfig({
  
     proxy:{
       '/api':{
-        target:'http://localhost:2000',
+        target:'https://mern-blog-backend-three.vercel.app',
         secure:false
        
       
