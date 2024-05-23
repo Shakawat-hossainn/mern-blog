@@ -4,11 +4,11 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite", 
-    "build": "vite build", 
+    "dev": "vite",
+    "build": "npm install && vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview", 
-    "start": "vite preview --port $PORT" 
+    "preview": "vite preview",
+    "start": "vite preview --port $PORT"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.2.4",
