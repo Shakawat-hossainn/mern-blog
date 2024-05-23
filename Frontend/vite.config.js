@@ -8,7 +8,7 @@ export default defineConfig({
     port: process.env.PORT || 5173, // Use the port provided by Render or default to 5173
     proxy: {
       '/api': {
-        target: 'https://mern-blog-backend-ten-xi.vercel.app',
+        target: 'http://localhost:2000',
         secure: false
       }
     }
