@@ -5,8 +5,8 @@
   "type": "module",
   "main": "app.js",
   "scripts": {
-    "dev": "nodemon Backend/index.js",
-    "start": "node Backend/index.js",
+    "dev": "nodemon Backend/app.js",
+    "start": "node Backend/app.js",
     "build": "npm install && npm install --prefix Frontend && npm run build --prefix Frontend"
   },
   "keywords": [],
