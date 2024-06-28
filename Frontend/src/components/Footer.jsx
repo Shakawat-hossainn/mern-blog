@@ -7,7 +7,7 @@ const Footer = () => {
     <FlowbiteFooter container className="border border-t-8 border-teal-500 foot "> {/* Use FlowbiteFooter instead of Footer from flowbite-react */}
       <div className="w-full ">
         <div className="grid w-full justify-between sm:flex sm:justify-between md:flex md:grid-cols-1">
-          <div>
+          <div className="mb-3">
     <span className="rounded text-3xl p-1 self-center relative   whitespace-nowrap bg-gradient-to-r from-indigo-500 via-purple-500 to-green-200  font-semibold dark:text-white" >Shakawat's </span><span  className="text-3xl relative  font-semibold dark:text-white">Blog</span>
     </div>
           <div className="grid grid-cols-2 gap-8 sm:mt-4 sm:grid-cols-3 sm:gap-6">

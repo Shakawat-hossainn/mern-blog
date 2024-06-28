@@ -5,30 +5,27 @@
 body, html {
     margin: 0;
     padding: 0;
-  }
-  * {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+* {
     box-sizing: border-box;
-  }
+}
+
+.sign-up, .container {
+    width: 100%;
+    padding: 0 1rem;
+    box-sizing: border-box;
+}
 
 @media screen and (max-width: 700px) {
-    .foot {
-        display: flex;
-        justify-content: center;
+    .sign-up {
         position: relative;
-      padding-right: 5rem;
-        width: 100%; /* Ensure the footer spans the full width */
-        box-sizing: border-box; /* Include padding and border within width */
-        
+        right: 0; /* Adjusted */
     }
-        
-.sign-up{
-     position: relative;
-     right: 12rem;
+    
+    .custom-navbar-toggle {
+        right: 0; /* Adjusted */
+    }
 }
-}
-
-.custom-navbar-toggle{
-    position: relative;
-    right: 12rem;
-}
-  
