@@ -43,7 +43,7 @@ const signin = async (req, res, next) => {
 
         const { password: pass, ...rest } = validUser._doc;
 
-        const token = jwt.sign({ userId: validUser._id,isAdmin:validUser.isAdmin }, process.env.JWT_SECRET);
+        const token = jwt.sign({ userId: validUser._id,isAdmin:validUser.isAdmin }, process.env.JWT_SECRET); // Because admin can be multiple people
 
         res.cookie('access_token', token, {
             httpOnly: true,
