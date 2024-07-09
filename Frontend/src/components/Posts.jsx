@@ -41,7 +41,7 @@ const Posts = () => {
     };
 
     {
-      currentUser.isAdmin && fetchPosts();
+      currentUser.isAdmin || currentUser.rest.isAdmin  && fetchPosts();
     }
     // console.log(currentUser)
   }, [currentUser.userId]);

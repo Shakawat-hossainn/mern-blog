@@ -42,7 +42,7 @@ const Users = () => {
     };
 
     {
-      currentUser.isAdmin && fetchUsers();
+      currentUser.isAdmin || currentUser.rest.isAdmin  && fetchUsers();
     }
     // console.log(currentUser)
   }, []);

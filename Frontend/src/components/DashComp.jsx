@@ -68,7 +68,7 @@ const DashComp = () => {
             }
         };
 
-        if (currentUser.isAdmin) {
+        if (currentUser.isAdmin || currentUser.rest.isAdmin ) {
             fetchComments();
             fetchUsers();
             fetchPosts();

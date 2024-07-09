@@ -279,7 +279,7 @@ const DashProfile = () => {
           Update
         </Button>
 
-        {currentUser.isAdmin && (
+        {currentUser.isAdmin || currentUser.rest.isAdmin  && (
          <Link to='/create-post'><Button type="button" outline gradientDuoTone="purpleToBlue" className="w-full">
             Create a Post
           </Button> </Link> 

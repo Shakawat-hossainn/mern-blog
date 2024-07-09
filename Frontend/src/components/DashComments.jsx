@@ -43,7 +43,7 @@ const DashComments = () => {
     };
 
     {
-      currentUser.isAdmin && fetchComments();
+      currentUser.isAdmin || currentUser.rest.isAdmin  && fetchComments();
     }
     // console.log(currentUser)
   }, []);

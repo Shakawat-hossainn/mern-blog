@@ -76,7 +76,7 @@ const Comment = ({ comment, likeComment, EditContent,onDelete }) => {
   const isCommentOwnerOrAdmin = () => {
     if (!currentUser) return false;
     const userId = currentUser.userId || (currentUser.rest && currentUser.rest._id);
-    return userId === comment.userId || currentUser.isAdmin;
+    return userId === comment.userId || currentUser.isAdmin || currentUser.rest.isAdmin ;
   };
 
   // Debugging statements

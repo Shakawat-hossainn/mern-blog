@@ -5,6 +5,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { signoutSuccess } from "../features/User/userSlice.js";
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import { current } from '@reduxjs/toolkit';
 
 const DashSidebar = () => {
   const { currentUser } = useSelector((store) => store.user)
@@ -38,11 +39,13 @@ const DashSidebar = () => {
     }
   }
 
+
+  console.log(currentUser)
   return (
     <Sidebar aria-label="Default sidebar example" className='w-full md:w-56'>
       <Sidebar.Items>
         <Sidebar.ItemGroup>
-          {currentUser.isAdmin && (
+          {currentUser.isAdmin || currentUser.rest.isAdmin  || currentUser.rest.isAdmin && (
             <Link to='/dashboard?tab=dash'>
               <Sidebar.Item as={'div'} active={tab === 'dash'} icon={HiOutlineViewGrid}>
                 Dashboard
@@ -50,25 +53,25 @@ const DashSidebar = () => {
             </Link>
           )}
           <Link to='/dashboard?tab=profile'>
-            <Sidebar.Item as={'div'} active={tab === 'profile'} icon={HiOutlineUserCircle} label={currentUser.isAdmin ? 'Admin' : 'User'} labelColor="dark">
+            <Sidebar.Item as={'div'} active={tab === 'profile'} icon={HiOutlineUserCircle} label={currentUser.isAdmin || currentUser.rest.isAdmin ? 'Admin' : 'User'} labelColor="dark">
               Profile
             </Sidebar.Item>
           </Link>
-          {currentUser.isAdmin && (
+          {currentUser.isAdmin || currentUser.rest.isAdmin  && (
             <Link to='/dashboard?tab=posts'>
               <Sidebar.Item as={'div'} active={tab === 'posts'} icon={HiOutlineDocumentText}>
                 Posts
               </Sidebar.Item>
             </Link>
           )}
-          {currentUser.isAdmin && (
+          {currentUser.isAdmin || currentUser.rest.isAdmin  && (
             <Link to='/dashboard?tab=users'>
               <Sidebar.Item as={'div'} active={tab === 'users'} icon={HiOutlineUsers}>
                 Users
               </Sidebar.Item>
             </Link>
           )}
-          {currentUser.isAdmin && (
+          {currentUser.isAdmin || currentUser.rest.isAdmin  && (
             <Link to='/dashboard?tab=comments'>
               <Sidebar.Item as={'div'} active={tab === 'comments'} icon={HiOutlineChatAlt}>
                 Comments
